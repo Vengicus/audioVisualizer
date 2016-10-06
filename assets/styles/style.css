@@ -1,0 +1,313 @@
+/*
+    COLORS:
+
+    #2B3A42     Navy blue [DARK]        RGB(43,58,66)
+    #3F5765     Navy blue [LIGHT]       RGB(63,87,101)
+    #BDD4DE     Sky blue                RGB(189,212,212)
+    #EFEFEF     Off White               RGB(239,239,239)
+    #FF530D     Red-Orange              RGB(255,83,13)
+    #FAFAFA     Body
+
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Monda', sans-serif;
+    
+*/
+
+html
+{
+
+}
+body
+{
+    padding: 0px;
+    margin: 0px;
+    background-color: #222222;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+select 
+{
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+label, button
+{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+}
+button
+{
+    letter-spacing: -1px;
+}
+button:hover
+{
+    cursor:pointer;
+}
+button:focus
+{
+    outline:none;
+}
+label
+{
+    color: #FAFAFA;
+}
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+    margin:0px;
+    margin-left: 0px !IMPORTANT;
+    display: block;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 31.5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+  background: #e1e1e1;
+  border-radius: 0px;
+  border: 0px solid #000101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0.7px 0.7px 1px #000000, 0px 0px 0.7px #0d0d0d;
+  border: 0px solid #000000;
+  height: 32px;
+  width: 20px;
+  border-radius: 0px;
+  background: #323232;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -0.25px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #f5f5f5;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 31.5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+  background: #e1e1e1;
+  border-radius: 0px;
+  border: 0px solid #000101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0.7px 0.7px 1px #000000, 0px 0px 0.7px #0d0d0d;
+  border: 0px solid #000000;
+  height: 32px;
+  width: 20px;
+  border-radius: 0px;
+  background: #323232;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 31.5px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #cdcdcd;
+  border: 0px solid #000101;
+  border-radius: 0px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+}
+input[type=range]::-ms-fill-upper {
+  background: #e1e1e1;
+  border: 0px solid #000101;
+  border-radius: 0px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0.7px 0.7px 1px #000000, 0px 0px 0.7px #0d0d0d;
+  border: 0px solid #000000;
+  height: 32px;
+  width: 20px;
+  border-radius: 0px;
+  background: #323232;
+  cursor: pointer;
+  height: 31.5px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #e1e1e1;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #f5f5f5;
+}
+
+canvas
+{
+    padding: 0px;
+    position: absolute;
+    top:0px;
+    bottom:0px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.songControls
+{
+    position:relative;
+    top: 2px;
+    background: none;
+    border: none;
+    color: #FAFAFA;
+}
+.songControls:hover
+{
+    color: #CCCCCC;
+    cursor:pointer;
+}
+.songControls:active
+{
+    color: #BBBBBB;
+}
+#audioSelect label:nth-child(2n)
+{
+    margin-left: 20px;
+    position: relative;
+    top: -1px;
+}
+#volume
+{
+    display: inline-block;
+    width: 100px;
+    height: 10px !IMPORTANT;
+    margin-left: 20px !IMPORTANT;
+}
+#navigationToggle
+{
+    float:left;
+    width: 50px;
+    height: 50px;
+    background-color: #333333;
+    color: #FAFAFA;
+    border: none;
+    transition: background 0.25s;
+}
+#navigationToggle:hover
+{
+    background-color: #444444;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#audioSelect
+{
+    position: absolute;
+    width: 100%;
+    margin-left: 50px;
+    padding-left: 50px;
+    background-color: #333333;
+}
+#audioSelect label
+{
+    font-size: 20px;
+    color: #FAFAFA;
+    position: relative;
+    top: 4px;
+}
+#audioSelect #trackUrl
+{
+    margin-left: 10px;
+    height: 50px;
+    width: 50%;
+    position: relative;
+    top: -4px;
+    background-color: #555555;
+    border: none;
+    text-indent: 10px;
+    color: #FAFAFA;
+}
+#audioSelect #trackUrl:hover
+{
+    background-color: #666666;
+}
+#audioSelect #trackUrl:focus
+{
+    background-color: #EEEEEE;
+    color: #222222;
+    outline:none;
+}
+
+.invisible
+{
+    display:none !IMPORTANT;
+}
+.toggled
+{
+    
+}
+#controls
+{
+    display: block;
+    clear: both;
+    width: 300px;
+    min-height: 100%;
+    background-color: #444444;
+    padding: 10px;
+    position:relative;
+    z-index: 1000;
+}
+#controls #buttons
+{
+    padding:0px;
+    width:100%;
+    margin: 0;
+    display: block;
+    height: 50px;
+}
+#controls button
+{
+    width: 49%;
+    padding: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    float:left;
+    background-color: #222222;
+    border: none;
+    border-radius: 7px;
+    color: #FAFAFA;
+    transition: background 0.25s;
+    margin-bottom: 6px;
+}
+#controls button:nth-child(2n)
+{
+    margin-left: 2%;
+}
+#controls button:hover
+{
+    background-color:#555555;
+    cursor: pointer;
+}
+#controls #sliders
+{
+    min-height: 100%;
+    margin-bottom: 10px;
+}
+#controls #sliders label
+{
+    display: block;
+    padding-top:3px;
+    padding-bottom: 3px;
+    margin-bottom: 5px;
+    text-indent: 5px;
+}
+#controls #sliders input
+{
+    position: relative;
+    top: 5px;
+    margin-left: 20px;
+}
+#controls #checkboxes
+{
+    
+}
+#controls #checkboxes label
+{
+    width: 40%;
+    display: inline-block;
+}

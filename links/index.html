@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <title>Audio Visualizer</title>
+    <link rel = "stylesheet" type = "text/css" href = "../assets/styles/font-awesome-4.3.0/css/font-awesome.css"/>
+    <link rel = "stylesheet" type = "text/css" href = "../assets/styles/style.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand|Monda' rel='stylesheet' type='text/css'>
+    <script type = "text/javascript" src = "../assets/script_assets/angular.min.js"></script>
+    <script type = "text/javascript" src = "../assets/script_assets/angular-sanitize.min.js"></script>
+    <script type = "text/javascript" src = "../assets/scripts/angular/visualizer.js"></script>
+</head>
+<body ng-app="app" ng-controller="CTRL">
+	<canvas id="canvas" width="640" height="400"></canvas>
+    <button id = "navigationToggle"><i class = "fa fa-bars fa-1x"></i></button>
+	<div id = "audioSelect">
+        <label>Select a Song:
+        <select id = "trackUrl" ng-model = "trackUrl">
+            <option ng-repeat = "song in songs track by $index" value = "{{song.url}}">{{song.name}}</option>    
+        </select>
+        <!--<input id = "trackUrl" type = "text" placeholder = "Youtube URL" value = ""/></label>-->
+        <button class = "songControls" id = "startSong"><i class = "fa fa-play-circle fa-2x"></i></button>
+        <button class = "songControls" id = "pause"><i class = "fa fa-pause fa-2x"></i></button>
+        <label>Volume<input id = "volume" type="range" min = "0" max = "100" value = "20"/></label>
+        </label>
+    </div>
+    <div id="controls" class = "invisible">
+		<audio loop></audio>
+		
+        <div id = "buttons">
+            <button id="fsButton">Go Full Screen</button>
+        </div>
+        <div id = "sliders">
+            <label>Max circle radius<input id = "maxRadius" type="range" min = "-50" max = "50" value = "20"/></label>
+            <label>Motion blur<input id = "motionBlur" type="range" min = "15" max = "100" value = "35"/></label>
+        </div>
+		<div id = "checkboxes">
+            <label><input id = "circleToggle" type = "checkbox" checked/>Circle</label>
+            <label><input id = "spinnerToggle" type = "checkbox" checked/>Spinner</label>
+            <label><input id = "lineToggle" type = "checkbox" checked/>Lines</label>
+            <label><input id = "barToggle" type = "checkbox" checked/>Bars</label>
+			<label><input id = "particles" type = "checkbox" checked/>Particles</label>
+			<label><input id = "backParticles" type = "checkbox" checked/>Background Particles</label>
+        </div>
+	</div>
+    
+</body>
+</html>
